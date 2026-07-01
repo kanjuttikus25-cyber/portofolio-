@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmad Rizal | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+color:white;
+}
+
+header{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:30px;
+}
+
+.profile{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid cyan;
+box-shadow:0 0 30px cyan;
+animation:float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+}
+
+h1{
+font-size:50px;
+margin-top:20px;
+}
+
+span{
+color:#00e5ff;
+}
+
+.subtitle{
+margin-top:10px;
+font-size:22px;
+color:#cbd5e1;
+}
+
+.button{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#00e5ff;
+color:#111;
+text-decoration:none;
+font-weight:bold;
+border-radius:40px;
+transition:.3s;
+}
+
+.button:hover{
+transform:scale(1.1);
+}
+
+section{
+padding:80px 20px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 20px rgba(0,229,255,.3);
+margin-top:30px;
+}
+
+.skill{
+display:inline-block;
+padding:12px 25px;
+margin:10px;
+background:cyan;
+color:#111;
+font-weight:bold;
+border-radius:30px;
+transition:.3s;
+}
+
+.skill:hover{
+transform:translateY(-5px);
+}
+
+.project{
+margin-top:20px;
+padding:20px;
+background:#1f2937;
+border-radius:15px;
+transition:.3s;
+}
+
+.project:hover{
+transform:scale(1.03);
+box-shadow:0 0 20px cyan;
+}
+
+footer{
+padding:30px;
+text-align:center;
+color:#94a3b8;
+}
+
+.hidden{
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div>
+
+<img src="IMG_20260629_173834_675.jpg" class="profile">
+
+<h1> <span>Rizal</span></h1>
+
+<p class="subtitle">
+Pelajar • Python Developer • Web Developer
+</p>
+
+<a href="#about" class="button">
+CLICK UNTUK MELIHAT
+</a>
+
+</div>
+
+</header>
+
+<section id="about" class="hidden">
+
+<div class="container">
+
+<div class="card">
+
+<h2>👋 Tentang Saya</h2>
+
+<br>
+
+<p>
+
+Halo!
+
+Perkenalkan nama saya <b>Rizal</b>.
+
+Saya seorang pelajar yang sedang belajar dunia pemrograman.
+
+Saat ini saya fokus mempelajari Python, HTML, CSS, JavaScript serta bercita-cita menjadi Full Stack Developer.
+
+Saya senang membuat website modern dan aplikasi yang bermanfaat.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="hidden">
+
+<div class="container">
+
+<div class="card">
+
+<h2>💻 Skill</h2>
+
+<br>
+
+<div class="skill">Python</div>
+
+<div class="skill">HTML</div>
+
+<div class="skill">CSS</div>
+
+<div class="skill">JavaScript</div>
+
+<div class="skill">Git</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="hidden">
+
+<div class="container">
+
+<div class="card">
+
+<h2>🚀 Project</h2>
+
+<div class="project">
+
+<h3>Website Portfolio</h3>
+
+<p>Membuat website profil pribadi menggunakan HTML & CSS.</p>
+
+</div>
+
+<div class="project">
+
+<h3>Belajar Python</h3>
+
+<p>Membuat program sederhana menggunakan Python.</p>
+
+</div>
+
+<div class="project">
+
+<h3>Target Selanjutnya</h3>
+
+<p>Membuat aplikasi Android dan Website Profesional.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="hidden">
+
+<div class="container">
+
+<div class="card">
+
+<h2>📱 Media Sosial</h2>
+
+<br>
+
+<p>Instagram : @mors_2510</p>
+
+<p>TikTok : @Xennz_5</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<br><br>
+
+Made with ❤️ HTML CSS JavaScript
+
+</footer>
+
+<script>
+
+const hidden=document.querySelectorAll('.hidden');
+
+window.addEventListener('scroll',()=>{
+
+hidden.forEach(el=>{
+
+const top=el.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+
+el.classList.add('show');
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
